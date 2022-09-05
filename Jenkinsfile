@@ -4,7 +4,10 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                dotnetBuild 
+                script {
+                    dotnetBuild()
+                }
+                 
             }
         }
         stage('Test') {
