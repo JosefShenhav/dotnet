@@ -4,8 +4,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                dotnet restore
-                dotnet build
+                sh 'dotnet restore'
+                sh 'dotnet build'
             }
         }
         stage('Test') {
